@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanshu Kumar Dwivedi</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0b1020;color:#fff}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0b1020,#1e3a8a)}
+img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:5px solid white}
+h1{font-size:3rem;margin-top:20px}
+.type{color:#60a5fa;font-size:1.3rem}
+.section{max-width:1000px;margin:auto;padding:50px 20px}
+.card{background:#111827;padding:25px;margin:20px 0;border-radius:15px}
+.btn{background:#2563eb;color:white;padding:12px 20px;text-decoration:none;border-radius:10px;display:inline-block;margin:8px}
+.timeline div{margin:15px 0}
+.project{padding:15px;border:1px solid #374151;border-radius:10px;margin:10px 0}
+</style>
+</head>
+<body>
+<div class="hero">
+<img src="profile.webp">
+<h1>Priyanshu Kumar Dwivedi</h1>
+<p class="type" id="typing"></p>
+<div>
+<a class="btn" href="mailto:priyanshukumardwivedi186@gmail.com">Email Me</a>
+<a class="btn" href="https://instagram.com/priyanshu_dubey_0001">Instagram</a>
+</div>
+</div>
+
+<div class="section">
+<div class="card">
+<h2>About Me</h2>
+<p>I am an enthusiastic learner focused on technology, career development and practical problem solving. I enjoy creating projects and continuously improving my professional skills.</p>
+</div>
+
+<div class="card">
+<h2>Skills</h2>
+<ul>
+<li>MS Excel</li>
+<li>Computer Fundamentals</li>
+<li>Internet Research</li>
+<li>Communication Skills</li>
+<li>Problem Solving</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Education</h2>
+<div class="timeline">
+<div>High School - Laxmi Narayan Inter College</div>
+<div>Intermediate - Laxmi Narayan Inter College</div>
+</div>
+</div>
+
+<div class="card">
+<h2>Projects</h2>
+<div class="project">
+<h3>Calculator App</h3>
+<input id="a" type="number"> + <input id="b" type="number">
+<button onclick="calc()">Calculate</button>
+<p id="r"></p>
+</div>
+
+<div class="project">
+<h3>Live Digital Clock</h3>
+<p id="clock"></p>
+</div>
+</div>
+
+<div class="card">
+<h2>Contact</h2>
+<p>Email: priyanshukumardwivedi186@gmail.com</p>
+<p>Mobile: 8081395723</p>
+<p>Instagram: priyanshu_dubey_0001</p>
+</div>
+</div>
+
+<script>
+const text="Aspiring Professional | Technology Enthusiast | Portfolio Owner";
+let i=0;
+setInterval(()=>{
+document.getElementById("typing").innerHTML=text.slice(0,i++);
+if(i>text.length)i=0;
+},120);
+
+function calc(){
+let a=+document.getElementById('a').value||0;
+let b=+document.getElementById('b').value||0;
+document.getElementById('r').innerHTML='Result: '+(a+b);
+}
+setInterval(()=>{
+document.getElementById('clock').innerHTML=new Date().toLocaleTimeString();
+},1000);
+</script>
+</body>
+</html>
